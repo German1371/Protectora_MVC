@@ -26,7 +26,6 @@ class AuthService {
 
     public function __construct() {
         $this->usuariosModel = new UsuariosModel();
-
     }
 
     public function registerUser($username, $email, $telefono, $password, $nombre, $apellido, $direccion, $rol, $activo) {

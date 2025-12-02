@@ -13,10 +13,16 @@
  *
  * @version: 1.0
  */
+
 namespace App\Controllers;
 
-class BaseController {
-    public function renderHTML($fileName, $data = []) {
-        include ($fileName);
+class BaseController
+{
+    public function renderHTML($filename, $data = []) {
+        ob_start();
+        include($filename);
+        $content = ob_get_clean();
+
+        include '../views/layouts/base_view.php';
     }
 }

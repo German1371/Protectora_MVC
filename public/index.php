@@ -29,30 +29,27 @@ $router = new Router();
 $router->get([
     'name' => 'animales',
     'path' => '/^\/animales$/',
-    'action' => [AnimalController::class, 'animalAction'],
-    'method' => 'GET'
+    'action' => [AnimalController::class, 'animalAction']
 ]);
 
 $router->get([
     'name' => 'usuarios',
     'path' => '/^\/usuarios\/?$/',
-    'action' => [UsuariosController::class, 'UsuariosAction'],
-    'method' => 'GET'
+    'action' => [UsuariosController::class, 'UsuariosAction']
 ]);
 
 $router->get([
     'name' => 'mostrarRegistrerForm',
     'path' => '/^\/auth\/register\/?$/',
-    'action' => [AuthController::class, 'showRegisterFormAction'],
-    'method' => 'GET'
+    'action' => [AuthController::class, 'showRegisterFormAction']
 ]);
 
 $router->post([
     'name' => 'PrcesarRegisterForm',
     'path' => '/^\/auth\/register\/?$/',
-    'action' => [AuthController::class, 'procesarRegisterFormAction'],
-    'method' => 'POST'
+    'action' => [AuthController::class, 'procesarRegisterFormAction']
 ]);
+
 
 
 

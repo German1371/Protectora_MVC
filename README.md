@@ -73,6 +73,3 @@ Todo tipo de aportaciones, sugerencias o ideas para mejorar la estructura y las 
 Este proyecto es abierto y puede utilizarse con fines educativos y experimentales.
 
 ---
-
-Si quieres, puedo añadir badges, un apartado de instalación/uso, capturas, o una sección de roadmap. ¿Quieres extenderlo aún más?
-

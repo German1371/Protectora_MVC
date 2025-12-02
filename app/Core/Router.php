@@ -39,7 +39,7 @@ class Router {
 
     public function get($route) {
         $this->routes[] = [
-            'method' => $route['method'],
+            'method' => 'GET',
             'path' => $route['path'],
             'action' => $route['action'],
             'name' => $route['name']
@@ -48,7 +48,7 @@ class Router {
 
     public function post($route) {
         $this->routes[] = [
-            'method' => $route['method'],
+            'method' => 'POST',
             'path' => $route['path'],
             'action' => $route['action'],
             'name' => $route['name']

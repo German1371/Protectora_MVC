@@ -24,7 +24,6 @@ use App\Models\UsuariosModel;
 class AuthController extends BaseController {
 
     public function showRegisterFormAction(){
-        
         $this->renderHTML('../views/auth/authView.php', ['error' => $_GET['error'] ?? null]);
     }
     public function procesarRegisterFormAction(){
@@ -32,7 +31,7 @@ class AuthController extends BaseController {
 
         echo "Procesando formulario de registro...";
         // Procesar el formulario de registro
-        $username = $_POST['username'];
+        $username = $_POST['username'];//implementar el cleardata
         $email = $_POST['email'];
         $telefono = $_POST['telefono'];
         $password = $_POST['password'];
@@ -43,8 +42,7 @@ class AuthController extends BaseController {
         $activo = $_POST['activo'];
 
         // Crear una instancia del modelo y servicio
-        $usuariosModel = new UsuariosModel();
-        $usuariosService = new AuthService($usuariosModel);
+        $usuariosService = new AuthService();
 
         // Insertar el nuevo usuario
         $usuariosService->registerUser($username, $email, $telefono, $password, $nombre, $apellido, $direccion, $rol, $activo);
